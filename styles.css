@@ -62,6 +62,10 @@ section {
     min-height: 400px;
 }
 
+option {
+    font-size: 2rem;
+}
+
 #hero {
     color: white;
     display: flex;
@@ -74,16 +78,56 @@ section {
     display: grid;
     place-content: center;
     padding: 4rem 6rem;
+    font-size: 4rem;
+    font-weight: 600;
 }
 
-#hero-left p {
-    font-size: 3.5rem;
-    font-weight: 600;
+.dropdown {
+    display: inline-flex;
+    position: relative;
+}
+
+.dd-btn {
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    z-index: 1;
+}
+
+.dd-btn:hover, .dd-list li:hover {
+    border: 2px solid rgb(0, 21, 255);
+}
+
+.dd-list {
+    font-size: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    animation: dd-animation 400ms;
+}
+
+.dd-list li {
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-top: 1px solid rgb(100, 100, 119);
+    text-align: right;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.dd-list li:last-child {
+    border-radius: 0 0 1rem 1rem;
 }
 
 #hero-right {
     flex-grow: 1;
-    background-color: rgb(19, 26, 79);
+    background-color: rgb(24, 32, 93);
     padding: 4rem 5rem;
     line-height: 3rem;
     display: grid;
@@ -98,7 +142,7 @@ section {
     font-weight: 600;
 }
 
-.hero-btn {
+.yellow-btn {
     background-color: rgb(255, 225, 0);
     padding: 1rem 2rem;
     font-size: 1.5rem;
@@ -109,15 +153,19 @@ section {
     cursor: pointer;
 }
 
-.hero-btn:hover {
+.yellow-btn:hover {
     transform: translateY(-5%);
 }
 
-.hero-btn:active {
+.yellow-btn:active {
     transform: translateY(0);
 }
 
 /* Utility classes */
+
+.hidden {
+    display: none;
+}
 
 .mid-div {
     height: 1rem;
@@ -129,4 +177,16 @@ section {
 
 .lo-div {
     height: .5rem;
+}
+
+/* Animations */
+
+@keyframes dd-animation {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
