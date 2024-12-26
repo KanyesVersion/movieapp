@@ -26,8 +26,7 @@ header {
     display: flex;
     background-color: var(--header-purple);
     backdrop-filter: blur(.5rem);
-    justify-content: center;
-    gap: 45%;
+    justify-content: space-around;
     padding: 1rem;
     font-size: 1.5rem;
     height: var(--header-height);
@@ -61,6 +60,15 @@ nav ul li:hover::after {
     width: 100%;
 }
 
+.burger-nav {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 section {
     height: calc(100vh - var(--header-height));
     min-height: 400px;
@@ -80,8 +88,9 @@ option {
     width: 65%;
     min-width: 65%;
     display: grid;
+    text-align: center;
     place-content: center;
-    padding: 4rem 6rem;
+    padding: 4rem 3rem;
     font-size: 4rem;
     font-weight: 600;
 }
@@ -92,8 +101,11 @@ option {
     transform: translateY(-.3rem);
 }
 
-.dd-btn {
+.dropdown > * {
     font-size: 2.5rem;
+}
+
+.dd-btn {
     padding: .5rem 1rem;
     border-radius: 2rem 2rem;
     cursor: pointer;
@@ -111,7 +123,6 @@ option {
 }
 
 .dd-list {
-    font-size: 2rem;
     position: absolute;
     top: 100%;
     left: 0;
@@ -144,12 +155,10 @@ option {
     background-color: rgb(24, 32, 93);
     padding: 4rem 5rem;
     line-height: 3rem;
-    display: grid;
-    place-content: center;
-}
-
-#hero-right-content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
 #hero-right p {
@@ -206,6 +215,45 @@ footer {
 
 .rotated-90-ccw {
     transform: rotate(-90deg);
+}
+
+/* Media queries */
+@media (max-width: 1300px) {
+    #hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .dropdown > * {
+        font-size: 2rem;
+    }
+
+    #hero > * {
+        width: 100%;
+        height: 60vh;
+    }
+
+    #hero-left {
+        font-size: 3rem;
+    }
+
+    #hero-right p {
+        font-size: 2rem !important;
+    }
+
+    nav {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+
+    .burger-nav {
+        display: block;
+    }
 }
 
 /* Animations */
