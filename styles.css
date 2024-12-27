@@ -37,6 +37,11 @@ header {
     z-index: 9;
 }
 
+header a {
+    color: white;
+    text-decoration: none;
+}
+
 nav ul {
     display: flex;
     list-style: none;
