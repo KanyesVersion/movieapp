@@ -1,3 +1,5 @@
+import './js-utils/dropdown.js';
+
 document.querySelector('.add-item-btn').addEventListener('click', () => {
     const titles = ['The Wild Robot', 'Hannah Montana', 'Never say Never', 'Tinkerbell'];
     const item = document.createElement('div');
