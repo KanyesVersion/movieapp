@@ -1,5 +1,6 @@
 :root {
     --header-height: 4.5rem;
+    --list-bg: rgb(17, 22, 63);
 }
 
 *, *::after, *::before {
@@ -91,13 +92,14 @@ option {
     font-size: 2rem;
     padding: .5rem 1rem;
     cursor: pointer;
-    border: none;
-    background-color: white;
+    border: 2px rgb(170, 4, 134) ;
+    background-color: rgb(206, 66, 176);
     z-index: 1;
+    border-radius: 20rem 20rem;
 }
 
 .dd-btn:hover, .dd-list li:hover {
-    border: 2px solid rgb(0, 21, 255);
+    border: 2px solid rgb(183, 97, 180);
 }
 
 .dd-list {
@@ -111,10 +113,10 @@ option {
 }
 
 .dd-list li {
-    background-color: white;
+    background-color: rgb(232, 141, 229);
     color: black;
     padding: .5rem;
-    border-top: 1px solid rgb(100, 100, 119);
+    border-top: 1px solid rgb(205, 45, 210);
     text-align: right;
     cursor: pointer;
     user-select: none;
@@ -161,6 +163,7 @@ option {
     transform: translateY(0);
 }
 
+
 /* Utility classes */
 
 .hidden {
@@ -189,4 +192,85 @@ option {
     100% {
         transform: translateY(0);
     }
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--list-bg);
+    width: 95vw;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(89, 89, 255, .9);
+    color: white;
+}
+
+.item-img {
+    width: 8rem;
+    border-radius: 12px;
+    float: left;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.list-item h3 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.list-item p {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: normal;
+}
+
+.rating {
+    display: flex;
+    direction: row;
+    font-size: 30px;
+    color: rgb(209, 208, 202);
+    cursor: pointer;
+}
+
+.watched-btn {
+    padding: .5rem;
+    font-size: 2rem;
+    color: rgb(220, 150, 214);
+    background-color: rgb(206, 19, 171);
+    border-radius: .5rem;
+    border: none;
+    aspect-ratio: 1/1;
+    width: 3.5rem;
+}
+
+/* Check height */
+.item-separator {
+    width: 1px;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.759);
+}
+
+.add-item-btn {
+    font-size: 2rem;
 }
