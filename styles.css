@@ -486,11 +486,13 @@ h1 {
     width: 5rem;
     border: none;
     padding-left: .5rem;
-=======
+}
+
 .add-txt {
     display: grid;
     text-align: center;
     place-content: center;
+    cursor: pointer;
     padding: 4rem;
     font-size: 4.5rem;
     font-weight: 600;
