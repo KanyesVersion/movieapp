@@ -1,0 +1,40 @@
+:root {
+    --header-height: 4.5rem;
+    --btn-pink: rgb(255, 61, 239);
+    --dd-li-pink: rgb(255, 168, 248);
+    --btn-pink-border: rgb(255, 0, 234);
+    --header-purple: rgba(89, 89, 255, .9);
+    --list-bg: rgb(23, 28, 66);
+    --body-bg: rgb(14, 18, 47);
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--body-bg);
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+section {
+    min-height: calc(100vh - var(--header-height));
+}
+
+option {
+    font-size: 2rem;
+}

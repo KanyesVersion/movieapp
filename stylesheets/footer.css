@@ -1,0 +1,10 @@
+footer {
+    height: 10vh;
+    background: linear-gradient(rgb(12, 12, 12), rgb(26, 26, 26));
+    color: #fff8;
+    display: grid;
+    place-content: center;
+    padding: 6rem;
+    text-align: center;
+    line-height: 3rem;
+}

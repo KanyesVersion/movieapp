@@ -1,0 +1,53 @@
+header {
+    color: rgb(246, 246, 246);
+    display: flex;
+    background-color: var(--header-purple);
+    backdrop-filter: blur(.5rem);
+    justify-content: space-around;
+    padding: 1rem;
+    font-size: 1.5rem;
+    height: var(--header-height);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+nav ul li::after {
+    height: 2px;
+    width: 0;
+    display: block;
+    content: '';
+    background-color: white;
+    transition: 230ms;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+.burger-nav {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}

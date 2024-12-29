@@ -1,0 +1,109 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    background-color: var(--list-bg);
+    width: 95vw;
+    margin: auto;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(140, 0, 117);
+    color: white;
+}
+
+.item-img {
+    width: 8rem;
+    border-radius: 12px;
+    float: left;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.list-item h3 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.list-item p {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: normal;
+}
+
+.rating {
+    display: flex;
+    direction: row;
+    font-size: 30px;
+    color: rgb(209, 208, 202);
+    cursor: pointer;
+}
+
+.watched-btn {
+    padding: .5rem;
+    font-size: 2rem;
+    color: rgb(220, 150, 214);
+    background-color: rgb(206, 19, 171);
+    border-radius: .5rem;
+    border: none;
+    aspect-ratio: 1/1;
+    width: 3.5rem;
+}
+
+.add-item-btn {
+    font-size: 2rem;
+}
+
+.add-txt {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    cursor: pointer;
+    padding: 4rem;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: rgba(143, 28, 215, 0.963);
+}
+
+.fa-film {
+    font-size: 8rem !important;
+}
+
+/* check center */
+dialog {
+    text-align: center;
+    place-content: center;
+    padding: 4rem;
+    background-color: white;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: 30%;
+}
+
+dialog::backdrop {
+    background-color: rgba(44, 26, 92, 0.422);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+#add-close-btn {
+    background-color: rgb(201, 186, 24);
+    padding: .5rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: .5rem;
+}

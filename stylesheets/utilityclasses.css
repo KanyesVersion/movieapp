@@ -1,0 +1,43 @@
+.hidden {
+    display: none !important;
+}
+
+.mid-div {
+    height: 1rem;
+}
+
+.hi-div {
+    height: 2rem;
+}
+
+.lo-div {
+    height: .5rem;
+}
+
+.rotated-90-ccw {
+    transform: rotate(-90deg);
+}
+
+.gridcenter {
+    display: grid;
+    place-content: center;
+}
+
+.twocols-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.type2-btn {
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Check height */
+.item-separator {
+    width: 1px;
+    align-self: stretch;
+    background-color: rgba(0, 0, 0, 0.544);
+}

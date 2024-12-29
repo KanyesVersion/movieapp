@@ -1,0 +1,61 @@
+.dropdown {
+    display: inline-flex;
+    position: relative;
+}
+
+.dropdown > * {
+    font-size: 2.5rem;
+}
+
+.dd-btn {
+    padding: .5rem 1rem;
+    border-radius: 2rem 2rem;
+    cursor: pointer;
+    border: 4px solid var(--btn-pink-border) ;
+    background-color: var(--btn-pink);
+    z-index: 1;
+    border-radius: 20rem 20rem;
+    width: 100%;
+}
+
+.dd-btn:hover {
+    border: 4px solid rgb(255, 237, 254);
+}
+
+.dd-chevron {
+    transition: transform 200ms ease;
+}
+
+.dd-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    animation: dd-animation 400ms;
+}
+
+.dd-list > * {
+    background-color: var(--dd-li-pink);
+    width: 100%;
+    color: black;
+    padding: .5rem 1rem;
+    border-top: 2px solid rgb(222, 81, 218);
+    text-align: right;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+}
+
+.dd-list > *:hover {
+    background-color: var(--btn-pink);
+}
+
+.dd-list > *:last-child {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.dd-list input[type="checkbox"] {
+    transform: scale(2)
+}

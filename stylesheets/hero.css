@@ -1,0 +1,66 @@
+#hero {
+    height: calc(100vh - var(--header-height));
+    min-height: 400px;
+    color: white;
+    display: flex;
+}
+
+#hero-left {
+    /* CHECK THIS */
+    width: 65%;
+    min-width: 65%;
+    display: grid;
+    text-align: center;
+    place-content: center;
+    padding: 4rem 3rem;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+#hero-left .dropdown {
+    transform: translateY(-.3rem);
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: left;
+    padding-top: 2rem;
+}
+
+#hero-right {
+    flex-grow: 1;
+    background-color: rgb(24, 32, 93);
+    padding: 4rem 5rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#hero-right p {
+    font-weight: 600;
+}
+
+/* Maybe shouldn't be here */
+.yellow-btn {
+    background-color: rgb(255, 225, 0);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 3rem;
+    box-shadow: .25rem .25rem 2px 0 rgb(0, 0, 12);
+    cursor: pointer;
+}
+
+.yellow-btn:hover {
+    transform: translateY(-5%);
+}
+
+.yellow-btn:active {
+    transform: translateY(0);
+}
