@@ -4,7 +4,8 @@
     --dd-li-pink: rgb(255, 168, 248);
     --btn-pink-border: rgb(255, 0, 234);
     --header-purple: rgba(89, 89, 255, .9);
-    --list-bg: rgb(17, 22, 63);
+    --list-bg: rgb(23, 28, 66);
+    --body-bg: rgb(14, 18, 47);
 }
 
 *, *::after, *::before {
@@ -19,7 +20,7 @@ html {
 
 body {
     font-family: 'Poppins', system-ui, sans-serif;
-    background-color: rgb(9, 12, 34);
+    background-color: var(--body-bg);
 }
 
 header {
@@ -76,9 +77,21 @@ nav ul li:hover::after {
     transform: translateY(-50%);
 }
 
-section {
+button {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#hero {
     height: calc(100vh - var(--header-height));
     min-height: 400px;
+}
+
+section {
+    min-height: calc(100vh - var(--header-height));
 }
 
 option {
@@ -102,10 +115,13 @@ option {
     font-weight: 600;
 }
 
+#hero-left .dropdown {
+    transform: translateY(-.3rem);
+}
+
 .dropdown {
     display: inline-flex;
     position: relative;
-    transform: translateY(-.3rem);
 }
 
 .dropdown > * {
@@ -120,6 +136,7 @@ option {
     background-color: var(--btn-pink);
     z-index: 1;
     border-radius: 20rem 20rem;
+    width: 100%;
 }
 
 .dd-btn:hover {
@@ -139,22 +156,24 @@ option {
     animation: dd-animation 400ms;
 }
 
-.dd-list li {
+.dd-list > * {
     background-color: var(--dd-li-pink);
+    width: 100%;
     color: black;
-    padding: .5rem;
+    padding: .5rem 1rem;
     border-top: 2px solid rgb(222, 81, 218);
     text-align: right;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+    display: flex;
 }
 
-.dd-list li:hover {
+.dd-list > *:hover {
     background-color: var(--btn-pink);
 }
 
-.dd-list li:last-child {
+.dd-list > *:last-child {
     border-radius: 0 0 1rem 1rem;
 }
 
@@ -225,7 +244,25 @@ footer {
     transform: rotate(-90deg);
 }
 
+.gridcenter {
+    display: grid;
+    place-content: center;
+}
+
+.twocols-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.type2-btn {
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
 /* Media queries */
+
 @media (max-width: 1300px) {
     #hero {
         flex-direction: column;
@@ -290,7 +327,6 @@ h1 {
     flex-direction: column;
     gap: 20px;
     padding: 1rem;
-    cursor: pointer;
     background-color: var(--list-bg);
     width: 95vw;
     margin: auto;
@@ -302,10 +338,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: .5rem;
+    padding: 1rem;
     width: 100%;
-    background-color: rgba(89, 89, 255, .9);
+    background-color: rgb(140, 0, 117);
     color: white;
 }
 
@@ -351,10 +387,106 @@ h1 {
 /* Check height */
 .item-separator {
     width: 1px;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 0.759);
+    align-self: stretch;
+    background-color: rgba(0, 0, 0, 0.544);
 }
 
+.add-item-btn {
+    font-size: 2rem;
+}
+
+.recommender-container {
+    /* try yellow */
+    background-color: rgb(0, 218, 233);
+    width: 75vw;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.recommender-container h2 {
+    font-size: 3rem;
+    color: black;
+}
+
+.recommender-options {
+    gap: 1rem;
+    color: white;
+}
+
+.recom-option {
+    background-color: rgb(33, 33, 33);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px .4rem .2rem rgba(0, 0, 0, 0.261);
+}
+
+.recom-option-dd > * {
+    width: 50%;
+}
+
+.recom-option-pick > * {
+    text-align: center;
+    height: 100%;
+    flex: 1;
+    padding: .5rem;
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 1.5rem;
+}
+
+.recom-option-pick > *:hover {
+    background-color: white;
+    color: black;
+}
+
+.recom-option-pick > *:first-child {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.recom-option-pick > *:last-child {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.recom-option-dd > span {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.recom-option-dd .dd-list li {
+    font-size: 1.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dd-list input[type="checkbox"] {
+    transform: scale(2)
+}
+
+.recom-accept-btn {
+    font-size: 2.5rem;
+    align-self: center;
+    background-color: rgb(112, 17, 255);
+    color: white;
+    font-weight: 600;
+    /* border: 4px solid rgb(37, 0, 69); */
+    box-shadow: 2px 2px .4rem .2rem rgba(0, 0, 0, 0.239);
+    letter-spacing: 1px;
+    border-radius: 50% !important;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
+    width: 5rem;
+    border: none;
+    padding-left: .5rem;
+=======
 .add-txt {
     display: grid;
     text-align: center;
@@ -368,16 +500,6 @@ h1 {
 .fa-film {
     font-size: 8rem !important;
 }
-
-/* .modal {
-    text-align: center;
-    place-content: center;
-    padding: 4rem;
-    background-color: white;
-    border-radius: .5rem;
-    font-size: 1.5rem;
-    width: 30%;
-} */
 
 /* check center */
 dialog {
