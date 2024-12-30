@@ -36,47 +36,58 @@
     </header>
     <main>
         <section class="gridcenter">
+            <!-- Recommender app container -->
             <div class="recommender-container">
                 <h2>We'll recommend a movie or series to you. Just tell us a bit about the mood today:</h2>
-                <div class="twocols-grid recommender-options">
-                    <div class="recom-option-dd recom-option"><span>I would watch:</span>
-                        <div class="dropdown">
-                            <button class="dd-btn">________<i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i></button>
-                            <ul class="dd-list hidden">
-                                <label for="recom-action-cb"><li>Action<input type="checkbox" id="recom-action-cb"></li></label>
-                                <label for="recom-adventure-cb"><li>Adventure<input type="checkbox" id="recom-adventure-cb"></li></label>
-                                <label for="recom-horror-cb"><li>Horror<input type="checkbox" id="recom-horror-cb"></li></label>
-                                <label for="recom-comedy-cb"><li>Comedy<input type="checkbox" id="recom-comedy-cb"></li></label>
-                                <label for="recom-scifi-cb"><li>Sci-Fi<input type="checkbox" id="recom-scifi-cb"></li></label>
-                                <label for="recom-fantasy-cb"><li>Fantasy<input type="checkbox" id="recom-fantasy-cb"></li></label>
-                                <label for="recom-romance-cb"><li>Romance<input type="checkbox" id="recom-romance-cb"></li></label>
+                <div class="twocols-grid recommender-categs">
+                    <!-- Genres categ -->
+                    <div class="recom-categ-dd recom-categ">
+                        <span>I would watch:</span>
+                        <div id="recom-genres-dd" class="dropdown dd-checkboxes" data-value="whatever">
+                            <button class="dd-btn"><span class="dd-btn-line">Whatever </span><i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i></button>
+                            <ul class="dd-list hidden twocols-grid">
+                                <label for="recom-action-cb"><li>Action<input type="checkbox" data-value="action"  id="recom-action-cb"></li></label>
+                                <label for="recom-adventure-cb"><li>Adventure<input type="checkbox" data-value="adventure" id="recom-adventure-cb"></li></label>
+                                <label for="recom-horror-cb"><li>Horror<input type="checkbox" data-value="horror" id="recom-horror-cb"></li></label>
+                                <label for="recom-comedy-cb"><li>Comedy<input type="checkbox" data-value="comedy" id="recom-comedy-cb"></li></label>
+                                <label for="recom-scifi-cb"><li>Sci-Fi<input type="checkbox" data-value="scifi" id="recom-scifi-cb"></li></label>
+                                <label for="recom-fantasy-cb"><li>Fantasy<input type="checkbox" data-value="fantasy" id="recom-fantasy-cb"></li></label>
+                                <label for="recom-romance-cb"><li>Romance<input type="checkbox" data-value="romance" id="recom-romance-cb"></li></label>
+                                <label for="recom-thriller-cb"><li>Thriller<input type="checkbox" data-value="thriller" id="recom-thriller-cb"></li></label>
                             </ul>
                         </div>
                     </div>
-                    <div class="recom-option-dd recom-option"><span>Duration:</span>
-                        <div class="dropdown">
-                            <button class="dd-btn">________<i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i></button>
+                    <!-- Duration categ -->
+                    <div class="recom-categ-dd recom-categ">
+                        <span>Duration:</span>
+                        <div id="recom-duration-dd" class="dropdown dd-single" data-value="4">
+                            <button class="dd-btn">
+                                <span class="dd-btn-line">I don't care</span>
+                                <i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i>
+                            </button>
                             <ul class="dd-list hidden">
-                                <li>Less than 30 min.</li>
-                                <li>Less than 1 hour</li>
-                                <li>1 - 2 hours</li>
-                                <li>2 - 3 hours</li>
-                                <li>I don't care</li>
+                                <li data-value="0">Less than 30 min.</li>
+                                <li data-value="1">Less than 1 hour</li>
+                                <li data-value="2">1 - 2 hours</li>
+                                <li data-value="3">2 - 3 hours</li>
+                                <li data-value="4">I don't care</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="recom-option-pick recom-option">
-                        <div>Movie</div>
-                        <div>Series</div>
-                        <div>Whatever</div>
+                    <!-- Movie or series categ -->
+                    <div class="recom-categ-pick recom-categ">
+                        <div name="recom-mov" data-value="0" aria-checked="false">Movie</div>
+                        <div name="recom-mov" data-value="1" aria-checked="false">Series</div>
+                        <div name="recom-mov" data-value="2" aria-checked="false">Whatever</div>
                     </div>
-                    <div class="recom-option-pick recom-option">
-                        <div>Live-action</div>
-                        <div>Animated</div>
-                        <div>Whatever</div>
+                    <!-- Live action or animated categ -->
+                    <div class="recom-categ-pick recom-categ">
+                        <div name="recom-liv" data-value="0" aria-checked="false">Live-action</div>
+                        <div name="recom-liv" data-value="1" aria-checked="false">Animated</div>
+                        <div name="recom-liv" data-value="2" aria-checked="false">Whatever</div>
                     </div>
                 </div>
-                <button class="recom-accept-btn"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button class="recom-accept-btn jumpy-btn" id="recom-accept-btn"><i class="fa fa-play" aria-hidden="true"></i></button>
             </div>
         </section>
     </main>

@@ -67,11 +67,53 @@ function pick(grs, dur, mov, liv) {
     }
 
     return mediaArr.filter(el => 
-        el.genres.some(genre => grs.includes(genre)) &&
+        el.genres.some(genre => grs.includes(genre.toLowerCase().replace('-', ''))) &&
         compareDuration(el.duration) &&
         compareMovie(el.movie) &&
         compareLive(el.live)
     );
 }
 
-console.log(pick(['Thriller'], 4, 1, 2));
+const recommendBtn = document.getElementById('recom-accept-btn');
+
+[...document.querySelectorAll('.recom-categ-pick')].forEach(categ => {
+    categ.addEventListener('click', e => {
+        // CHECK: Try to make this more reusable, more general and less specific
+        if (e.target.getAttribute('name') === 'recom-liv') {
+            // Reset
+            document.querySelectorAll('[name="recom-liv"]').forEach(option => {
+                option.setAttribute('aria-checked', "false");
+                option.classList.remove('recom-categ-pick-active');
+            });
+
+            // Set the clicked option to true
+            e.target.setAttribute('aria-checked', 'true');
+            e.target.classList.add('recom-categ-pick-active');
+        }
+        
+        if (e.target.getAttribute('name') === 'recom-mov') {
+            // Reset
+            document.querySelectorAll('[name="recom-mov"]').forEach(option => {
+                option.setAttribute('aria-checked', "false");
+                option.classList.remove('recom-categ-pick-active');
+            });
+
+            // Set the clicked option to true
+            e.target.setAttribute('aria-checked', 'true');
+            e.target.classList.add('recom-categ-pick-active');
+        }
+    });
+});
+
+recommendBtn.addEventListener('click', () => {
+    const selectedOptions = {
+        genres: document.getElementById('recom-genres-dd').dataset.value.split(','),
+        duration: document.getElementById('recom-duration-dd').dataset.value,
+        movieOrSeries: [...document.querySelectorAll('[name="recom-mov"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value,
+        liveOrAnimated: [...document.querySelectorAll('[name="recom-liv"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value,
+    }
+
+    const fittingMedia = pick(selectedOptions.genres, parseInt(selectedOptions.duration), parseInt(selectedOptions.movieOrSeries), parseInt(selectedOptions.liveOrAnimated));
+    const randomMedia = fittingMedia[Math.floor(Math.random() * fittingMedia.length)];
+    console.log(randomMedia);
+});

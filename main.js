@@ -1,10 +1,10 @@
-import './js-utils/dropdown.js';
-import './js-utils/recommender.js';
+if (document.querySelector('.recommender-container')) {
+    import('./js-utils/recommender.js');
+}
+if (document.querySelector('.dropdown')) {
+    import('./js-utils/dropdown.js');
+}
 
-const modal = document.getElementById('add-item-modal');
-const openModal = document.querySelector('.add-txt');
-const closeModal = document.querySelector('.add-txt');
-
-openModal.addEventListener('click', () => {
-    modal.showModal();
-});
+if (document.querySelector('.list-container')) {
+    import('./js-utils/addItem.js');
+}
