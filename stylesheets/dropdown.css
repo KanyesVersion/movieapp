@@ -3,10 +3,6 @@
     position: relative;
 }
 
-.dropdown > * {
-    font-size: 2.5rem;
-}
-
 .dd-btn {
     padding: .5rem 1rem;
     border-radius: 2rem 2rem;
@@ -16,6 +12,10 @@
     z-index: 1;
     border-radius: 20rem 20rem;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
 }
 
 .dd-btn:hover {
@@ -31,15 +31,13 @@
     top: 100%;
     left: 0;
     list-style: none;
-    width: 100%;
+    width: 100% !important;
     animation: dd-animation 400ms;
 }
 
 .dd-list > * {
     background-color: var(--dd-li-pink);
-    width: 100%;
     color: black;
-    padding: .5rem 1rem;
     border-top: 2px solid rgb(222, 81, 218);
     text-align: right;
     cursor: pointer;
@@ -52,10 +50,18 @@
     background-color: var(--btn-pink);
 }
 
-.dd-list > *:last-child {
+.dd-list:not(.twocols-grid) > *:last-child {
     border-radius: 0 0 1rem 1rem;
 }
 
+.dd-list.twocols-grid > *:nth-last-child(2) {
+    border-radius: 0 0 0 1rem;
+}
+
+.dd-list.twocols-grid > *:last-child {
+    border-radius: 0 0 1rem 0;
+}
+
 .dd-list input[type="checkbox"] {
-    transform: scale(2)
+    transform: scale(1)
 }
