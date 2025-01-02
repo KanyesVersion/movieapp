@@ -1,39 +1,45 @@
-// document.querySelector('#add-close-btn').addEventListener('click', () => {
-//     const titles = ['The Wild Robot', 'Hannah Montana', 'Never say Never', 'Tinkerbell'];
-//     const item = document.createElement('div');
-//     item.classList.add('list-item');
-//     item.innerHTML = `
-//         <img src="../assets/BCS.jpg" alt="" class="item-img"> 
-//         <h3>${titles[Math.floor(Math.random()*titles.length)]}</h3>
-//         <div class="item-separator"></div>
-//         <p>2015</p>
-//         <div class="item-separator"></div>
-//         <p>Crime/Drama</p>
-//         <div class="item-separator"></div>
-//         <p>Series</p>
-//         <div class="item-separator"></div>
-//         <div class="rating">
-//             <span class="star" data-value="1">&#9733;</span>
-//             <span class="star" data-value="2">&#9733;</span>
-//             <span class="star" data-value="3">&#9733;</span>
-//             <span class="star" data-value="4">&#9733;</span>
-//             <span class="star" data-value="5">&#9733;</span>
-//             <input type="hidden" id="rating-value" value="0">
-//         </div>
-//         <div class="item-separator"></div>
-//         <button class="watched-btn">
-//             <i class="fa fa-circle-o" aria-hidden="true"></i>
-//         </button>
-//     `;
-//     document.querySelector('.list-container').appendChild(item);
-// });
-
 const modal = document.getElementById('add-item-modal');
-const openModal = document.querySelector('.add-txt');
-const closeModal = document.querySelector('.add-txt');
+const placeholder = document.querySelector('.empty-placeholder');
 
-modal.showModal();
+document.getElementById('add-close-btn').addEventListener('click', () => {
+    const title = document.getElementById('title-input').value;
+    const genres = document.getElementById('modal-genres-dd').dataset.value;
+    const hours = document.getElementById('hour-input').value;
+    const minutes = document.getElementById('minute-input').value;
+    const liveOrAnimated = [...document.querySelectorAll('[name="modal-liv"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value;
+    const movieOrSeries = [...document.querySelectorAll('[name="modal-mov"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value;
+    const item = document.createElement('div');
+    item.classList.add('list-item');
+    // Study the genres logic 
+    item.innerHTML = `
+        <img src="../assets/BCS.jpg" alt="" class="item-img"> 
+        <h3>${title}</h3>
+        <div class="item-separator"></div>
+        <p>${genres.split(',').map(el => el.charAt(0).toUpperCase()+el.slice(1)).map(el => el.replace('Scifi','Sci-Fi')).join(' / ')}</p>
+        <div class="item-separator"></div>
+        <p>${hours}:${minutes}</p>
+        <div class="item-separator"></div>
+        <p>${liveOrAnimated}</p>
+        <div class="item-separator"></div>
+        <p>${movieOrSeries}</p>
+        <div class="item-separator"></div>
+        <div class="rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+            <input type="hidden" id="rating-value" value="0">
+        </div>
+        <div class="item-separator"></div>
+        <button class="watched-btn">
+            <i class="fa fa-circle-o" aria-hidden="true"></i>
+        </button>
+    `;
+    document.querySelector('.list-container').appendChild(item);
+    modal.close();
+});
 
-openModal.addEventListener('click', () => {
+placeholder.addEventListener('click', () => {
     modal.showModal();
 });

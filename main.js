@@ -8,3 +8,7 @@ if (document.querySelector('.dropdown')) {
 if (document.querySelector('.list-container')) {
     import('./js-utils/addItem.js');
 }
+
+if (document.querySelector('.custom-radio')) {
+    import('./js-utils/customRadio.js');
+}

@@ -1,6 +1,7 @@
 .dropdown {
     display: inline-flex;
     position: relative;
+    z-index: 1;
 }
 
 .dd-btn {
