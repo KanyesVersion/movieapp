@@ -6,6 +6,7 @@
     --header-purple: rgba(89, 89, 255, .9);
     --list-bg: rgb(23, 28, 66);
     --body-bg: rgb(14, 18, 47);
+    --yellow-gold: rgb(227, 197, 0);
 }
 
 *, *::after, *::before {
