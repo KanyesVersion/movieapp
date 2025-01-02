@@ -38,55 +38,57 @@
         <section>
             <h1>All Movies & Series</h1>
             <div class="list-container">
-                <!-- <div class="list-item">
-                    <img src="./assets/BCS.jpg" alt="" class="item-img"> 
-                    <h3>Better Call Saul</h3>
-                    <div class="item-separator"></div>
-                    <p>2015</p>
-                    <div class="item-separator"></div>
-                    <p>Crime/Drama</p>
-                    <div class="item-separator"></div>
-                    <p>Series</p>
-                    <div class="item-separator"></div>
-                    <div class="rating">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
-                        <input type="hidden" id="rating-value" value="0">
-                    </div>
-                    <div class="item-separator"></div>
-                    <button class="watched-btn">
-                        <i class="fa fa-circle-o" aria-hidden="true"></i>
-                    </button>
-                </div> -->
-                <!-- <button class="add-item-btn">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>   -->
-                <div class="add-txt">
+                <div class="empty-placeholder">
                     <p>You don't have anything yet. Do you want to add something?</p>
                     <i class="fa fa-film" aria-hidden="true"></i>
-                    <dialog id="add-item-modal">
-                        <p>hola</p>
-                        <form class="form" method="dialog">
-                            <label for="title">Title</label>
-                            <input type="text">
-                            <label for="title">Title</label>
-                            <input type="text">
-                            <label for="title">Title</label>
-                            <input type="text">
-                            <button id="add-close-btn">Add item</button>
-                        </form>
-                    </dialog>
                 </div>
             </div>
+            <dialog id="add-item-modal">
+                <div class="modal-content">
+                    <h2>Choose your movie or series information</h2>
+                    <div class="twocols-grid">
+                        <p>Title</p>
+                        <input type="text" id="title-input">
+                        <p>Genre</p>
+                        <div id="modal-genres-dd" class="dropdown dd-checkboxes" data-value="whatever">
+                            <button class="dd-btn"><span class="dd-btn-line">____________</span><i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i></button>
+                            <ul class="dd-list hidden twocols-grid">
+                                <label for="modal-action-cb"><li>Action<input type="checkbox" data-value="action"  id="modal-action-cb"></li></label>
+                                <label for="modal-adventure-cb"><li>Adventure<input type="checkbox" data-value="adventure" id="modal-adventure-cb"></li></label>
+                                <label for="modal-horror-cb"><li>Horror<input type="checkbox" data-value="horror" id="modal-horror-cb"></li></label>
+                                <label for="modal-comedy-cb"><li>Comedy<input type="checkbox" data-value="comedy" id="modal-comedy-cb"></li></label>
+                                <label for="modal-scifi-cb"><li>Sci-Fi<input type="checkbox" data-value="scifi" id="modal-scifi-cb"></li></label>
+                                <label for="modal-fantasy-cb"><li>Fantasy<input type="checkbox" data-value="fantasy" id="modal-fantasy-cb"></li></label>
+                                <label for="modal-romance-cb"><li>Romance<input type="checkbox" data-value="romance" id="modal-romance-cb"></li></label>
+                                <label for="modal-thriller-cb"><li>Thriller<input type="checkbox" data-value="thriller" id="modal-thriller-cb"></li></label>
+                            </ul>
+                        </div>
+                        <p>Duration</p>
+                        <div class="modal-duration">
+                            <input type="number" id="hour-input">
+                            <span>:</span>
+                            <input type="number" id="minute-input">
+                        </div>
+                        <p>Type</p>
+                        <div class="custom-radio black-category">
+                            <div name="modal-liv" data-value="Live-action" aria-checked="false">Live-action</div>
+                            <div name="modal-liv" data-value="Animated" aria-checked="false">Animated</div>
+                        </div>
+                        <p>It is a</p>
+                        <div class="custom-radio black-category">
+                            <div name="modal-mov" data-value="Movie" aria-checked="false">Movie</div>
+                            <div name="modal-mov" data-value="Series" aria-checked="false">Series</div>
+                        </div>
+                    </div>
+                    <button class="type2-btn" id="add-close-btn">Add item</button>
+                </div>
+            </dialog>
         </section>
     </main>
     <footer>
         <p class="footer-links">Privacy policy | Cookie information | Terms of use</p>
         <p>Fait avec soin par mes petites mains ♥ Petites Mains 2024</p>
-     </footer>
+    </footer>
     <script src="../main.js" type="module"></script>
 </body>
 </html>

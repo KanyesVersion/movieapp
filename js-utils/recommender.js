@@ -18,6 +18,23 @@ const peterPan = new MediaInfo(5, 'Peter Pan', ['Fantasy', 'Children'], 76, fals
 const tinkerbellNever = new MediaInfo(6, 'Tinker Bell and the Legend of the Neverbeast', ['Fantasy', 'Children'], 76, false, true);
 const fullMetalBH = new MediaInfo(7, 'Fullmetal Alchemist: Brotherhood', ['Fantasy', 'Action', 'Adventure'], 23, false, false);
 const orfanato = new MediaInfo(8, 'El Orfanato', ['Horror', 'Drama', 'Thriller'], 105, true, true);
+const flow = new MediaInfo(9, 'Flow', ['Adventure', 'Fantasy'], 84, false, true);
+const isleDogs = new MediaInfo(10, 'Isle of dogs', ['Sci-Fi', 'Comedy'], 101, false, true);
+const returnCats = new MediaInfo(11, 'The cats return', ['Adventure', 'Comedy'], 75, false, true);
+const bobCat = new MediaInfo(12, 'A street cat named Bob', ['Family', 'Comedy'], 103, true, true);
+const mcu = new MediaInfo(13, 'Infinity Saga', ['Superhero', 'Action'], 130, true, true);
+const marryMax = new MediaInfo(14, 'Marry and Max', ['Comedy', 'Drama'], 94, false, true);
+const aristocats = new MediaInfo(15, 'The Aristocats', ['Comedy', 'Family'], 78, false, true);
+const manOtto = new MediaInfo(16, 'A man called Otto', ['Comedy', 'Drama'], 126, true, true);
+const countryOldMen = new MediaInfo(17, 'No country for old men', ['Thriller', 'Western'], 122, true, true);
+const fargo = new MediaInfo(18, 'Fargo', ['Crime', 'Comedy'], 98, true, true);
+const zathura = new MediaInfo(19, 'Zathura: A Space Adventure', ['Family', 'Adventure'], 101, true, true);
+const mrNobody = new MediaInfo(20, 'Mr. Nobody', ['Sci-Fi', 'Fantasy'], 78, true, true);
+const donnieDarko = new MediaInfo(21, 'Donnie Darko', ['Sci-Fi', 'Thriller'], 113, true, true);
+const midsommar = new MediaInfo(22, 'Midsommar', ['Horror', 'Mistery'], 148, true, true);
+const paprika = new MediaInfo(23, 'Paprika', ['Thriller', 'Sci-Fi'], 90, false, true);
+const perfectBlue = new MediaInfo(24, 'Perfect Blue', ['Horror', 'Mistery'], 81, false, true);
+const summerDays = new MediaInfo(25, '500 days of summer', ['Comedy', 'Romance'], 95, true, true);
 
 const mediaArr = [
     wildRobot,
@@ -75,35 +92,6 @@ function pick(grs, dur, mov, liv) {
 }
 
 const recommendBtn = document.getElementById('recom-accept-btn');
-
-[...document.querySelectorAll('.recom-categ-pick')].forEach(categ => {
-    categ.addEventListener('click', e => {
-        // CHECK: Try to make this more reusable, more general and less specific
-        if (e.target.getAttribute('name') === 'recom-liv') {
-            // Reset
-            document.querySelectorAll('[name="recom-liv"]').forEach(option => {
-                option.setAttribute('aria-checked', "false");
-                option.classList.remove('recom-categ-pick-active');
-            });
-
-            // Set the clicked option to true
-            e.target.setAttribute('aria-checked', 'true');
-            e.target.classList.add('recom-categ-pick-active');
-        }
-        
-        if (e.target.getAttribute('name') === 'recom-mov') {
-            // Reset
-            document.querySelectorAll('[name="recom-mov"]').forEach(option => {
-                option.setAttribute('aria-checked', "false");
-                option.classList.remove('recom-categ-pick-active');
-            });
-
-            // Set the clicked option to true
-            e.target.setAttribute('aria-checked', 'true');
-            e.target.classList.add('recom-categ-pick-active');
-        }
-    });
-});
 
 recommendBtn.addEventListener('click', () => {
     const selectedOptions = {
