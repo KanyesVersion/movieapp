@@ -45,7 +45,24 @@ const mediaArr = [
     peterPan,
     tinkerbellNever,
     fullMetalBH,
-    orfanato
+    orfanato,
+    flow,
+    isleDogs,
+    returnCats,
+    bobCat,
+    mcu,
+    marryMax,
+    aristocats,
+    manOtto,
+    countryOldMen,
+    fargo,
+    zathura,
+    mrNobody,
+    donnieDarko,
+    midsommar,
+    paprika,
+    perfectBlue,
+    summerDays
 ];
 
 function pick(grs, dur, mov, liv) {
