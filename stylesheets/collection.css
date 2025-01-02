@@ -82,12 +82,12 @@
 /* check center */
 dialog {
     text-align: center;
-    place-content: center;
     padding: 4rem;
     background-color: white;
     border-radius: .5rem;
     font-size: 1.5rem;
     width: 30%;
+    margin: auto;
 }
 
 dialog::backdrop {
