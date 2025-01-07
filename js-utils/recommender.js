@@ -33,8 +33,14 @@ const mrNobody = new MediaInfo(20, 'Mr. Nobody', ['Sci-Fi', 'Fantasy'], 78, true
 const donnieDarko = new MediaInfo(21, 'Donnie Darko', ['Sci-Fi', 'Thriller'], 113, true, true);
 const midsommar = new MediaInfo(22, 'Midsommar', ['Horror', 'Mistery'], 148, true, true);
 const paprika = new MediaInfo(23, 'Paprika', ['Thriller', 'Sci-Fi'], 90, false, true);
-const perfectBlue = new MediaInfo(24, 'Perfect Blue', ['Horror', 'Mistery'], 81, false, true);
+const perfectBlue = new MediaInfo(24, 'Perfect Blue', ['Horror', 'Mystery'], 81, false, true);
 const summerDays = new MediaInfo(25, '500 days of summer', ['Comedy', 'Romance'], 95, true, true);
+const dark = new MediaInfo(26, 'Dark', ['Thriller'], 51, true, false);
+const ghibli = new MediaInfo(27, 'Ghibli', ['Fantasy', 'Family', 'Adventure', ''], 95, false, true);
+const princeEgypt = new MediaInfo(28, 'The prince of Egypt', ['Family', 'Musical'], 100, false, true);
+const camino = new MediaInfo(29, 'El Camino', ['Thriller', 'Crime'], 140, true, true);
+const ladyTramp = new MediaInfo(30, 'Lady and the Tramp', ['Family', 'Romance'], 76, false, true);
+const goodPlace = new MediaInfo(30, 'The good place', ['Fantasy', 'Comedy'], 25, true, false);
 
 const mediaArr = [
     wildRobot,
@@ -62,7 +68,13 @@ const mediaArr = [
     midsommar,
     paprika,
     perfectBlue,
-    summerDays
+    summerDays,
+    dark,
+    ghibli,
+    princeEgypt,
+    camino,
+    ladyTramp,
+    goodPlace
 ];
 
 function pick(grs, dur, mov, liv) {
@@ -113,17 +125,21 @@ function pick(grs, dur, mov, liv) {
 }
 
 const recommendBtn = document.getElementById('recom-accept-btn');
+const recomMatchModal = document.getElementById('recom-match-modal');
 
 recommendBtn.addEventListener('click', () => {
+    // pick winner media
     const selectedOptions = {
         genres: document.getElementById('recom-genres-dd').dataset.value.split(','),
         duration: document.getElementById('recom-duration-dd').dataset.value,
         movieOrSeries: [...document.querySelectorAll('[name="recom-mov"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value,
         liveOrAnimated: [...document.querySelectorAll('[name="recom-liv"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value,
     }
-    console.log(selectedOptions);
     
     const fittingMedia = pick(selectedOptions.genres, parseInt(selectedOptions.duration), parseInt(selectedOptions.movieOrSeries), parseInt(selectedOptions.liveOrAnimated));
     const randomMedia = fittingMedia[Math.floor(Math.random() * fittingMedia.length)];
-    console.log(randomMedia);
+
+    // Open modal with information
+    recomMatchModal.showModal();
+    document.getElementById('recom-match-title').textContent = randomMedia.title;
 });
