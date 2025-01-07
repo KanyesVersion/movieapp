@@ -112,11 +112,15 @@ function pick(grs, dur, mov, liv) {
         }
     }
 
+    function compareGenres(grsC) {
+        return grs.includes('whatever') ? true : grsC.some(genre => grs.includes(genre.toLowerCase().replace('-', '')));
+    } 
+
     return mediaArr.filter(el => 
-        el.genres.some(genre => grs.includes(genre.toLowerCase().replace('-', ''))) &&
-        compareDuration(el.duration) &&
-        compareMovie(el.movie) &&
-        compareLive(el.live)
+        compareGenres(el.genres)
+        && compareDuration(el.duration)
+        && compareMovie(el.movie) 
+        && compareLive(el.live)
     );
 }
 
