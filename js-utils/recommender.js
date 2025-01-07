@@ -100,11 +100,15 @@ function pick(grs, dur, mov, liv) {
         }
     }
 
+    function compareGenres(grsC) {
+        return grs.includes('whatever') ? true : grsC.some(genre => grs.includes(genre.toLowerCase().replace('-', '')));
+    } 
+
     return mediaArr.filter(el => 
-        el.genres.some(genre => grs.includes(genre.toLowerCase().replace('-', ''))) &&
-        compareDuration(el.duration) &&
-        compareMovie(el.movie) &&
-        compareLive(el.live)
+        compareGenres(el.genres)
+        && compareDuration(el.duration)
+        && compareMovie(el.movie) 
+        && compareLive(el.live)
     );
 }
 
@@ -117,7 +121,8 @@ recommendBtn.addEventListener('click', () => {
         movieOrSeries: [...document.querySelectorAll('[name="recom-mov"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value,
         liveOrAnimated: [...document.querySelectorAll('[name="recom-liv"]')].find(option => option.getAttribute('aria-checked') === 'true').dataset.value,
     }
-
+    console.log(selectedOptions);
+    
     const fittingMedia = pick(selectedOptions.genres, parseInt(selectedOptions.duration), parseInt(selectedOptions.movieOrSeries), parseInt(selectedOptions.liveOrAnimated));
     const randomMedia = fittingMedia[Math.floor(Math.random() * fittingMedia.length)];
     console.log(randomMedia);
