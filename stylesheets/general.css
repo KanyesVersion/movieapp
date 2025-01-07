@@ -40,7 +40,6 @@ option {
     font-size: 2rem;
 }
 
-/* check center */
 dialog {
     text-align: center;
     padding: 1.5rem;
@@ -65,4 +64,27 @@ dialog h2 {
 
 dialog::backdrop {
     background-color: rgba(22, 13, 50, 0.608);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.modal-content > .twocols-grid {
+    gap: 1.5rem;
+    grid-template-columns: 20% 1fr !important;
+    text-align: right;
+    align-items: center;
+}
+
+.modal-btn {
+    background-color: rgb(2, 142, 206);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: .5rem;
+    font-weight: 600;
 }
