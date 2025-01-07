@@ -98,3 +98,9 @@
     border: none;
     padding-left: .5rem;
 }
+
+#recom-match-title {
+    font-size: 1.75rem;
+    color: var(--btn-pink);
+    font-weight: 600;
+}

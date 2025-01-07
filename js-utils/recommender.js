@@ -126,6 +126,7 @@ function pick(grs, dur, mov, liv) {
 
 const recommendBtn = document.getElementById('recom-accept-btn');
 const recomMatchModal = document.getElementById('recom-match-modal');
+const tyModalBtn = document.getElementById('recom-close-btn');
 
 recommendBtn.addEventListener('click', () => {
     // pick winner media
@@ -143,3 +144,7 @@ recommendBtn.addEventListener('click', () => {
     recomMatchModal.showModal();
     document.getElementById('recom-match-title').textContent = randomMedia.title;
 });
+
+tyModalBtn.addEventListener('click', () => {
+    recomMatchModal.close();
+})
