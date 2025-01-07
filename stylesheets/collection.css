@@ -72,18 +72,6 @@
     font-size: 8rem !important;
 }
 
-/* check center */
-dialog {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: rgb(231, 222, 38);
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    width: 30%;
-    margin: auto;
-    border: none;
-}
-
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -96,21 +84,6 @@ dialog {
     grid-template-columns: 20% 1fr !important;
     text-align: right;
     align-items: center;
-}
-
-dialog input {
-    font-size: 1.5rem;
-    border-radius: 1.5rem;
-    border: none;
-    padding: 0 1rem;
-}
-
-dialog h2 {
-    font-size: 2rem;
-}
-
-dialog::backdrop {
-    background-color: rgba(22, 13, 50, 0.608);
 }
 
 #add-close-btn {

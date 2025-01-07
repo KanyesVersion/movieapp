@@ -47,6 +47,7 @@ document.getElementById('add-close-btn').addEventListener('click', () => {
             </button>
         `;
         document.querySelector('.list-container').appendChild(item);
+        placeholder.style.display = 'none';
         modal.close();
     }
 });

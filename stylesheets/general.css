@@ -39,3 +39,30 @@ section {
 option {
     font-size: 2rem;
 }
+
+/* check center */
+dialog {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgb(231, 222, 38);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    width: 30%;
+    margin: auto;
+    border: none;
+}
+
+dialog input {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0 1rem;
+}
+
+dialog h2 {
+    font-size: 2rem;
+}
+
+dialog::backdrop {
+    background-color: rgba(22, 13, 50, 0.608);
+}
