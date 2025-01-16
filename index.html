@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./stylesheets/recommender.css">
     <link rel="stylesheet" href="./stylesheets/mediaqueries.css">
     <link rel="stylesheet" href="./stylesheets/animations.css">
+    <link rel="stylesheet" href="./stylesheets/home.css">
 </head>
 <body>
     <!-- Hero split between 'my collection' and log in stuff, and recommender -->
@@ -43,9 +44,12 @@
                 <div class="dropdown">
                     <button class="dd-btn">________<i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i></button>
                     <ul class="dd-list hidden">
-                        <li>Action</li>
-                        <li>Adventure</li>
-                        <li>Horror</li>
+                        <a href="pages/recommender.html"><li>Action</li></a>
+                        <a href="pages/recommender.html" data-value="adventure"><li>Adventure</li></a>
+                        <a href="pages/recommender.html" data-value="horror"><li>Horror</li></a>
+                        <a href="pages/recommender.html" data-value="comedy"><li>Comedy</li></a>
+                        <a href="pages/recommender.html" data-value="scifi"><li>Sci-fi</li></a>
+                        <a href="pages/recommender.html" data-value="fantasy"><li>Fantasy</li></a>
                     </ul>
                 </div>
             </div>
@@ -54,10 +58,26 @@
             <p style="font-size: 2.5rem;">Start creating your collection and join the world of Movie Ranker</p>
             <div class="mid-div"></div>
             <button id="hero-su-btn" class="yellow-btn jumpy-btn">Sign Up</button>
+            <div class="signup-section hidden">
+                <label for="signup-username">Username:</label>
+                <input type="text">
+                <label for="signup-password">Password:</label>
+                <input type="password">
+                <label for="signup-confirm-password">Confirm Password:</label>
+                <input type="password">
+                <button class="type2-btn new-user-btn">Sign Up</button>
+            </div>
             <div class="hi-div"></div>
             <p style="font-size: 1.5rem;">Already have an account?</p>
             <div class="lo-div"></div>
             <button class="yellow-btn jumpy-btn">Log In</button>
+            <div class="login-section hidden">
+                <label for="login-username">Username:</label>
+                <input type="text">
+                <label for="login-password">Password:</label>
+                <input type="password">
+                <button class="type2-btn">Submit</button>
+            </div>
         </div>
     </section>
     </main>

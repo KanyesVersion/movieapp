@@ -55,3 +55,26 @@ h1 {
 #hero-right p {
     font-weight: 600;
 }
+
+.signup-section {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(109, 38, 123);
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    margin: auto;
+    border: none;
+}
+
+.login-section {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(109, 38, 123);
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    margin: auto;
+    border: none;
+}
+

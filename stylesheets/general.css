@@ -66,6 +66,10 @@ dialog::backdrop {
     background-color: rgba(22, 13, 50, 0.608);
 }
 
+a {
+    text-decoration: none;
+}
+
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -87,4 +91,20 @@ dialog::backdrop {
     color: white;
     border-radius: .5rem;
     font-weight: 600;
+}
+
+.close-modal-btn {
+    background-color: transparent;
+    border: none;
+    color: #db0cdf;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0.2rem;
+    right: 0.3rem;
+    cursor: pointer;
+}
+
+.close-modal-btn:hover {
+    color:white;
+    font-size: 1.8rem;
 }
