@@ -1,4 +1,4 @@
-const modal = document.getElementById('add-item-modal');
+const addItemModal = document.getElementById('add-item-modal');
 const placeholder = document.querySelector('.empty-placeholder');
 
 document.getElementById('add-close-btn').addEventListener('click', () => {
@@ -48,10 +48,14 @@ document.getElementById('add-close-btn').addEventListener('click', () => {
         `;
         document.querySelector('.list-container').appendChild(item);
         placeholder.style.display = 'none';
-        modal.close();
+        addItemModal.close();
     }
 });
 
 placeholder.addEventListener('click', () => {
-    modal.showModal();
+    addItemModal.showModal();
+});
+
+addItemModal.querySelector('.close-modal-btn').addEventListener('click', () => {
+    addItemModal.close();
 });

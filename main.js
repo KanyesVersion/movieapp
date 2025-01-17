@@ -1,12 +1,3 @@
-// let selectedGenre = null;
-// const hero = document.getElementById('hero');
-// [...hero.querySelectorAll('a')].forEach(link => {
-//     link.addEventListener('click', () => {
-//         selectedGenre = link.dataset.value;
-//         console.log(selectedGenre);
-//     });
-// });
-
 if (document.querySelector('.recommender-container')) {
     import('./js-utils/recommender.js');
 }

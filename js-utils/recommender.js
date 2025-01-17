@@ -1,5 +1,3 @@
-console.log(selectedGenre);
-
 class MediaInfo {
     constructor(id, title, genres, duration, live, movie) {
         this.id = id;

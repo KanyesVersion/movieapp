@@ -49,6 +49,7 @@ dialog {
     width: 30%;
     margin: auto;
     border: none;
+    position: relative;
 }
 
 dialog input {
@@ -96,15 +97,16 @@ a {
 .close-modal-btn {
     background-color: transparent;
     border: none;
-    color: #db0cdf;
+    color: var(--btn-pink-border);
     position: absolute;
-    font-size: 1.5rem;
-    top: 0.2rem;
-    right: 0.3rem;
+    font-size: 2rem;
+    top: 0.25rem;
+    right: 0.25rem;
     cursor: pointer;
+    aspect-ratio: 1 / 1;
+    width: 2rem;
 }
 
 .close-modal-btn:hover {
     color:white;
-    font-size: 1.8rem;
 }

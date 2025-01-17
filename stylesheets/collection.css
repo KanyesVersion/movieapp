@@ -88,3 +88,7 @@
 .custom-radio {
     color: white;
 }
+
+#add-item-modal p {
+    font-weight: 600;
+}
