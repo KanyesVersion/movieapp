@@ -49,7 +49,6 @@ dialog {
     width: 30%;
     margin: auto;
     border: none;
-    position: relative;
 }
 
 dialog input {
