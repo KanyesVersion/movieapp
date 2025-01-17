@@ -1,3 +1,5 @@
+console.log(selectedGenre);
+
 class MediaInfo {
     constructor(id, title, genres, duration, live, movie) {
         this.id = id;
@@ -147,4 +149,4 @@ recommendBtn.addEventListener('click', () => {
 
 tyModalBtn.addEventListener('click', () => {
     recomMatchModal.close();
-})
+});
