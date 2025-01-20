@@ -68,6 +68,7 @@ dialog::backdrop {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .modal-content {
@@ -108,4 +109,17 @@ a {
 
 .close-modal-btn:hover {
     color:white;
+}
+
+.custom-radio {
+    color: white;
+}
+
+.black-category {
+    background-color: rgb(33, 33, 33);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px .4rem .2rem rgba(0, 0, 0, 0.261);
 }

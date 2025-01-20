@@ -1,6 +1,11 @@
+if (document.querySelector('#hero')) {
+    import('./js-utils/signlog.js');
+}
+
 if (document.querySelector('.recommender-container')) {
     import('./js-utils/recommender.js');
 }
+
 if (document.querySelector('.dropdown')) {
     import('./js-utils/dropdown.js');
 }

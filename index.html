@@ -24,7 +24,9 @@
 <body>
     <!-- Hero split between 'my collection' and log in stuff, and recommender -->
     <header>
-    Movie Ranker
+    <a href="index.html" class="home-icon gridcenter">
+        <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
     <nav>
         <ul>
             <li><a href="pages/collection.html">My collection</a></li>
@@ -45,7 +47,6 @@
                     <button class="dd-btn">________<i class="fa fa-chevron-left dd-chevron" aria-hidden="true"></i></button>
                     <ul class="dd-list hidden">
                         <a href="pages/recommender.html"><li>Action</li></a>
-                        <a href="pages/recommender.html" data-value="adventure"><li>Adventure</li></a>
                         <a href="pages/recommender.html" data-value="horror"><li>Horror</li></a>
                         <a href="pages/recommender.html" data-value="comedy"><li>Comedy</li></a>
                         <a href="pages/recommender.html" data-value="scifi"><li>Sci-fi</li></a>
@@ -55,28 +56,39 @@
             </div>
         </div>
         <div id="hero-right">
-            <p style="font-size: 2.5rem;">Start creating your collection and join the world of Movie Ranker</p>
-            <div class="mid-div"></div>
-            <button id="hero-su-btn" class="yellow-btn jumpy-btn">Sign Up</button>
-            <div class="signup-section hidden">
-                <label for="signup-username">Username:</label>
-                <input type="text">
-                <label for="signup-password">Password:</label>
-                <input type="password">
-                <label for="signup-confirm-password">Confirm Password:</label>
-                <input type="password">
-                <button class="type2-btn new-user-btn">Sign Up</button>
+            <div class="hr-initial-area">
+                <p style="font-size: 2.5rem;">Start creating your collection and join the world of Movie Ranker</p>
+                <div class="mid-div"></div>
+                <button id="redir-signup-btn" class="yellow-btn jumpy-btn">Sign Up</button>
+                <div class="hi-div"></div>
+                <p style="font-size: 1.5rem;">Already have an account?</p>
+                <div class="lo-div"></div>
+                <button id="redir-login-btn" class="yellow-btn jumpy-btn">Log In</button>
             </div>
-            <div class="hi-div"></div>
-            <p style="font-size: 1.5rem;">Already have an account?</p>
-            <div class="lo-div"></div>
-            <button class="yellow-btn jumpy-btn">Log In</button>
-            <div class="login-section hidden">
-                <label for="login-username">Username:</label>
+            <div class="hr-fields-area signup-area hidden">
+                <p>Username:</p>
                 <input type="text">
-                <label for="login-password">Password:</label>
+                <div class="mid-div"></div>
+                <p>Password:</p>
                 <input type="password">
-                <button class="type2-btn">Submit</button>
+                <div class="mid-div"></div>
+                <p>Confirm Password:</p>
+                <input type="password">
+                <div class="hi-div"></div>
+                <button class="jumpy-btn" id="signup-btn">Sign Up</button>
+                <div class="hi-div"></div>
+                <span class="hr-alt-link">Already have an account? Log in</span>
+            </div>
+            <div class="hr-fields-area login-area hidden">
+                <p>Username:</p>
+                <input type="text">
+                <div class="mid-div"></div>
+                <p>Password:</p>
+                <input type="password">
+                <div class="hi-div"></div>
+                <button class="jumpy-btn" id="login-btn">Log In</button>
+                <div class="hi-div"></div>
+                <span class="hr-alt-link">Don't have an account yet? Sign up</span>
             </div>
         </div>
     </section>

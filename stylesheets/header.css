@@ -3,7 +3,6 @@ header {
     display: flex;
     background-color: var(--header-purple);
     backdrop-filter: blur(.5rem);
-    justify-content: space-around;
     padding: 1rem;
     font-size: 1.5rem;
     height: var(--header-height);
@@ -13,7 +12,27 @@ header {
     z-index: 9;
 }
 
-header a {
+.home-icon {
+    font-size: 2rem;
+    background-color: #0004;
+    height: 75%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    color: #fffb;
+    position: absolute;
+    left: 1rem;
+}
+
+.home-icon:hover {
+    color: white;
+}
+
+nav {
+    position: absolute;
+    right: 2rem;
+}
+
+nav a {
     color: white;
     text-decoration: none;
 }

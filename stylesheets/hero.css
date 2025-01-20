@@ -56,14 +56,35 @@ h1 {
     font-weight: 600;
 }
 
-.signup-section {
-    text-align: center;
-    padding: 1rem;
-    background-color: rgb(109, 38, 123);
-    border-radius: 1rem;
-    font-size: 1rem;
+.hr-fields-area {
+    /* background-color: rgb(109, 38, 123); */
     width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.hr-fields-area p {
+    font-size: 1.5rem;
+}
+
+.hr-fields-area input {
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #fff3;
+    color: white;
+    width: 100%;
+}
+
+.hr-fields-area button {
+    font-size: 1.75rem;
+    background-color: rgb(9, 226, 164);
+    box-shadow: 1px 2px 0 2px #0006;
+    border-radius: 3rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
     border: none;
 }
 
@@ -78,3 +99,9 @@ h1 {
     border: none;
 }
 
+.hr-alt-link {
+    text-align: center;
+    align-self: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
